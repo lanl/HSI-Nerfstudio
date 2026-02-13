@@ -10,18 +10,14 @@ Currently this implements the following HSI NeRF ideas:
 <video 
   src="renders/paper/grid_Falsecolor.mp4" 
   loop
-  controls
-  autoplay
-  mute>
+  controls>
 </video>
 
 
 <video 
   src="renders/paper/grid_ACE.mp4" 
   loop
-  controls
-  autoplay
-  mute>
+  controls>
 </video>
 
 ## Conda Environment
