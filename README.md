@@ -111,6 +111,17 @@ The current set of rendering .json files uses the default 70 FOV, but to match t
   controls>
 </video>
 
+### Paper Replication
+
+The code here can also reproduce the results from the preprint [here](https://doi.org/10.36227/techrxiv.176127454.46552904/v1).
+To recreate the models and renders related to the paper, first run `scripts/train_all_models.sh` to train all the needed models (including those for the ablation study).
+Read documentation in the script for what options to change as far as runtime options (shouldn't change seeds, methods, etc. to match paper).
+Then, `render_example_models.sh` can generate full NeRF renders for the specific model examples demonstrated in the paper (and found in renders).
+Then, the `Paper_plots.ipynb` can be run to reproduce the static plots found in the paper, as well as the tables.
+*NOTE: there are pytorch functions that are NOT deterministic! Therefore it will be impossible to reproduce the exact numbers found in the paper. What is provided the code that was used to produce the exact numbers in the paper.*
+
+
+
 
 ## Acknowledgement
 
