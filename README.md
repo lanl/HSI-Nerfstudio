@@ -31,7 +31,7 @@ To register the methods, run `pip install -e .`.
 
 ## Data (transforms.json)
 
-The data needed to run this code is found on [Zenodo](https://doi.org/10.5281/zenodo.18626748). 
+The data needed to run this code is found on [Zenodo](https://doi.org/10.5281/zenodo.18626884). 
 Download the data and unzip it so that the file structure looks something like (i.e., just unzip in your repo):  
 
 <pre>
