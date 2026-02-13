@@ -7,6 +7,23 @@ Currently this implements the following HSI NeRF ideas:
 2. Multi-channel Density
 3. Geometry Regularization
 
+<video 
+  src="renders/paper/grid_Falsecolor.mp4" 
+  loop
+  controls
+  autoplay
+  mute>
+</video>
+
+
+<video 
+  src="renders/paper/grid_ACE.mp4" 
+  loop
+  controls
+  autoplay
+  mute>
+</video>
+
 ## Conda Environment
 
 The HSI models need to be "registered" in nerfstudio before they can be used.
