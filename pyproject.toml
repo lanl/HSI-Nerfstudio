@@ -1,0 +1,31 @@
+[project]
+name = "hsi_nerf"
+version = "1.0.0"
+
+dependencies = [
+    "nerfstudio" # you may want to consider pinning the version, ie "nerfstudio==0.1.19"
+]
+
+[tool.setuptools.packages.find]
+include = ["HSINerf*"]
+
+[project.entry-points."nerfstudio.dataparser_configs"]
+hsi-data = "HSINerf.HSI_config_dataparser:hsi_dataparser"
+
+[project.entry-points.'nerfstudio.method_configs']
+hsi_nerf = 'HSINerf.HSI_config_method:hsi_method'
+hsi_mipnerf = 'HSINerf.HSI_config_method:hsi_method_mip'
+hsi_mipnerf_MD = 'HSINerf.HSI_config_method:hsi_method_mip_multidensity'
+hsi_mipnerf_GR = 'HSINerf.HSI_config_method:hsi_method_mip_geomreg'
+hsi_mipnerf_MD_GR = 'HSINerf.HSI_config_method:hsi_method_mip_geomreg_multichannel'
+hsi_mipnerf_L2 = 'HSINerf.HSI_config_method:hsi_method_mip_L2'
+hsi_mipnerf_L1 = 'HSINerf.HSI_config_method:hsi_method_mip_L1'
+hsi_mipnerf_L1_SAM = 'HSINerf.HSI_config_method:hsi_method_mip_L1_SAM'
+hsi_mipnerf_L2_SAM = 'HSINerf.HSI_config_method:hsi_method_mip_L2_SAM'
+hsi_mipnerf_MD_GR_L2 = 'HSINerf.HSI_config_method:hsi_method_mip_MD_GR_L2'
+
+[project.scripts]
+hsi-eval = "HSINerf.scripts.HSI_eval:entrypoint"
+hsi-viewer = "HSINerf.scripts.HSI_viewer:entrypoint"
+hsi-train = "HSINerf.scripts.HSI_train:entrypoint"
+hsi-render = "HSINerf.scripts.HSI_render:entrypoint"
