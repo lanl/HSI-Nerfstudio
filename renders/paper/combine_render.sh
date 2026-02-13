@@ -38,8 +38,8 @@ $(((W+GAP)*3))_$((H+GAP)):fill=black[grid]; \
     [p5]drawtext=fontfile=$FONT:text='Mip-NeRF':x=20:y=$((TOP_PAD + H + GAP + H/2 - 18)):fontsize=18:fontcolor=white[outv] \
   " \
   -map "[outv]" \
-#   -c:v libopenh264 -b:v 30M -maxrate 30M -bufsize 60M -g 1 -keyint_min 1 -pix_fmt yuv420p \
-    -c:v libopenh264 -b:v 30M -maxrate 30M -bufsize 60M -g 15 -keyint_min 15 -r 30 -vsync cfr -pix_fmt yuv420p \
+  -c:v libopenh264 -b:v 30M -maxrate 30M -bufsize 60M -g 1 -keyint_min 1 -pix_fmt yuv420p \
+    # -c:v libopenh264 -b:v 30M -maxrate 30M -bufsize 60M -g 15 -keyint_min 15 -r 30 -vsync cfr -pix_fmt yuv420p \
   grid_Falsecolor.mp4
 
 # --------------------------
