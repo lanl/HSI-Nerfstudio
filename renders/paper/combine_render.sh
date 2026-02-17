@@ -42,6 +42,12 @@ $(((W+GAP)*3))_$((H+GAP)):fill=black[grid]; \
     # -c:v libopenh264 -b:v 30M -maxrate 30M -bufsize 60M -g 15 -keyint_min 15 -r 30 -vsync cfr -pix_fmt yuv420p \
   grid_Falsecolor.mp4
 
+# Convert Falsecolor MP4 -> GIF (palette method)
+ffmpeg -y -i grid_Falsecolor.mp4 -vf "fps=30,scale=800:-1:flags=lanczos,palettegen" grid_Falsecolor_palette.png
+ffmpeg -y -i grid_Falsecolor.mp4 -i grid_Falsecolor_palette.png -lavfi "fps=15,scale=800:-1:flags=lanczos [x]; [x][1:v] paletteuse" -loop 0 grid_Falsecolor.gif
+rm -f grid_Falsecolor_palette.png
+
+
 # --------------------------
 # ACE version (only filenames/output name changed)
 # --------------------------
@@ -75,3 +81,9 @@ $(((W+GAP)*3))_$((H+GAP)):fill=black[grid]; \
   -map "[outv]" \
   -c:v libopenh264 -b:v 30M -maxrate 30M -bufsize 60M -g 1 -keyint_min 1 -pix_fmt yuv420p \
   grid_ACE.mp4
+
+# Convert ACE MP4 -> GIF (palette method)
+ffmpeg -y -i grid_ACE.mp4 -vf "fps=30,scale=800:-1:flags=lanczos,palettegen" grid_ACE_palette.png
+ffmpeg -y -i grid_ACE.mp4 -i grid_ACE_palette.png -lavfi "fps=15,scale=800:-1:flags=lanczos [x]; [x][1:v] paletteuse" -loop 0 grid_ACE.gif
+rm -f grid_ACE_palette.png
+
