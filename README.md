@@ -7,18 +7,12 @@ Currently this implements the following HSI NeRF ideas:
 2. Multi-channel Density
 3. Geometry Regularization
 
-<video 
-  src="renders/paper/grid_Falsecolor.mp4" 
-  loop
-  controls>
-</video>
+![Falsecoloring renders](renders/paper/grid_Falsecolor.gif)
 
+![ACE renders](renders/paper/grid_ACE.gif)
 
-<video 
-  src="renders/paper/grid_ACE.mp4" 
-  loop
-  controls>
-</video>
+Higher-qualtiy .mp4 renders can be found in `renders/paper`.
+
 
 ## Conda Environment
 
