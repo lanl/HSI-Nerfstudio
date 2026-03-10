@@ -30,16 +30,15 @@ $((W+GAP))_$((H+GAP))|\
 $(((W+GAP)*2))_$((H+GAP))|\
 $(((W+GAP)*3))_$((H+GAP)):fill=black[grid]; \
     [grid]pad=iw+$LEFT_PAD:ih+$TOP_PAD:$LEFT_PAD:$TOP_PAD:black[p0]; \
-    [p0]drawtext=fontfile=$FONT:text='20 imgs':x=$((LEFT_PAD + 0*(W+GAP) + 10)):y=20:fontsize=14:fontcolor=white[p1]; \
-    [p1]drawtext=fontfile=$FONT:text='40 imgs':x=$((LEFT_PAD + 1*(W+GAP) + 10)):y=20:fontsize=14:fontcolor=white[p2]; \
-    [p2]drawtext=fontfile=$FONT:text='50 imgs':x=$((LEFT_PAD + 2*(W+GAP) + 10)):y=20:fontsize=14:fontcolor=white[p3]; \
-    [p3]drawtext=fontfile=$FONT:text='100 imgs':x=$((LEFT_PAD + 3*(W+GAP) + 10)):y=20:fontsize=14:fontcolor=white[p4]; \
-    [p4]drawtext=fontfile=$FONT:text='Our Method':x=20:y=$((TOP_PAD + H/2 - 18)):fontsize=18:fontcolor=white[p5]; \
+    [p0]drawtext=fontfile=$FONT:text='20 Imgs':x=$((LEFT_PAD + 0*(W+GAP) + 10)):y=20:fontsize=14:fontcolor=white[p1]; \
+    [p1]drawtext=fontfile=$FONT:text='40 Imgs':x=$((LEFT_PAD + 1*(W+GAP) + 10)):y=20:fontsize=14:fontcolor=white[p2]; \
+    [p2]drawtext=fontfile=$FONT:text='50 Imgs':x=$((LEFT_PAD + 2*(W+GAP) + 10)):y=20:fontsize=14:fontcolor=white[p3]; \
+    [p3]drawtext=fontfile=$FONT:text='100 Imgs':x=$((LEFT_PAD + 3*(W+GAP) + 10)):y=20:fontsize=14:fontcolor=white[p4]; \
+    [p4]drawtext=fontfile=$FONT:text='MD-GR-NeRF':x=20:y=$((TOP_PAD + H/2 - 18)):fontsize=18:fontcolor=white[p5]; \
     [p5]drawtext=fontfile=$FONT:text='Mip-NeRF':x=20:y=$((TOP_PAD + H + GAP + H/2 - 18)):fontsize=18:fontcolor=white[outv] \
   " \
   -map "[outv]" \
   -c:v libopenh264 -b:v 30M -maxrate 30M -bufsize 60M -g 1 -keyint_min 1 -pix_fmt yuv420p \
-    # -c:v libopenh264 -b:v 30M -maxrate 30M -bufsize 60M -g 15 -keyint_min 15 -r 30 -vsync cfr -pix_fmt yuv420p \
   grid_Falsecolor.mp4
 
 # Convert Falsecolor MP4 -> GIF (palette method)
@@ -71,11 +70,11 @@ $((W+GAP))_$((H+GAP))|\
 $(((W+GAP)*2))_$((H+GAP))|\
 $(((W+GAP)*3))_$((H+GAP)):fill=black[grid]; \
     [grid]pad=iw+$LEFT_PAD:ih+$TOP_PAD:$LEFT_PAD:$TOP_PAD:black[p0]; \
-    [p0]drawtext=fontfile=$FONT:text='20 imgs':x=$((LEFT_PAD + 0*(W+GAP) + 10)):y=20:fontsize=14:fontcolor=white[p1]; \
-    [p1]drawtext=fontfile=$FONT:text='40 imgs':x=$((LEFT_PAD + 1*(W+GAP) + 10)):y=20:fontsize=14:fontcolor=white[p2]; \
-    [p2]drawtext=fontfile=$FONT:text='50 imgs':x=$((LEFT_PAD + 2*(W+GAP) + 10)):y=20:fontsize=14:fontcolor=white[p3]; \
-    [p3]drawtext=fontfile=$FONT:text='100 imgs':x=$((LEFT_PAD + 3*(W+GAP) + 10)):y=20:fontsize=14:fontcolor=white[p4]; \
-    [p4]drawtext=fontfile=$FONT:text='Our Method':x=20:y=$((TOP_PAD + H/2 - 18)):fontsize=18:fontcolor=white[p5]; \
+    [p0]drawtext=fontfile=$FONT:text='20 Imgs':x=$((LEFT_PAD + 0*(W+GAP) + 10)):y=20:fontsize=14:fontcolor=white[p1]; \
+    [p1]drawtext=fontfile=$FONT:text='40 Imgs':x=$((LEFT_PAD + 1*(W+GAP) + 10)):y=20:fontsize=14:fontcolor=white[p2]; \
+    [p2]drawtext=fontfile=$FONT:text='50 Imgs':x=$((LEFT_PAD + 2*(W+GAP) + 10)):y=20:fontsize=14:fontcolor=white[p3]; \
+    [p3]drawtext=fontfile=$FONT:text='100 Imgs':x=$((LEFT_PAD + 3*(W+GAP) + 10)):y=20:fontsize=14:fontcolor=white[p4]; \
+    [p4]drawtext=fontfile=$FONT:text='MD-GR-NeRF':x=20:y=$((TOP_PAD + H/2 - 18)):fontsize=18:fontcolor=white[p5]; \
     [p5]drawtext=fontfile=$FONT:text='Mip-NeRF':x=20:y=$((TOP_PAD + H + GAP + H/2 - 18)):fontsize=18:fontcolor=white[outv] \
   " \
   -map "[outv]" \
